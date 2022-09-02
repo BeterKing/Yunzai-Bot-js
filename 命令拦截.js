@@ -38,17 +38,6 @@ export class lanjie extends plugin {
       get: () => false
     })
     this.file = `${this._path}/plugins/example/data.yaml`
-    this.asd =this.get("data")
-    /** 定时任务更新群列表 */
-    this.task ={
-      cron:'0 0/20 * * * ?',
-      name:'',
-      fnc:() =>this.update(),
-      log: false
-    }
-  }
-/** 配置文件 */
-  async init() {
     if (!fs.existsSync(this.file)) {
       let data = []
       Bot.gl.forEach(function (group, groupId) {
@@ -56,6 +45,15 @@ export class lanjie extends plugin {
       })
       let yaml = YAML.stringify(data)
       fs.writeFileSync(this.file, yaml, "utf8")
+    }
+
+    this.asd =this.get("data")
+    /** 定时任务更新群列表 */
+    this.task ={
+      cron:'0 0/20 * * * ?',
+      name:'update',
+      fnc:() =>this.update(),
+      log: false
     }
   }
 
