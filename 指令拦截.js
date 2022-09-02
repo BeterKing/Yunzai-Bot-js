@@ -37,7 +37,7 @@ export class lanjie extends plugin {
     Object.defineProperty(rule, "log", {
       get: () => false
     })
-    this.file = `${this._path}/plugins/example/data.yaml`
+    this.file = `${this._path}/data/data.yaml`
     if (!fs.existsSync(this.file)) {
       let data = []
       Bot.gl.forEach(function (group, groupId) {
@@ -253,11 +253,21 @@ export class lanjie extends plugin {
         fs.writeFileSync(this.file, YAML.stringify(this.asd), "utf8")
       }
     }
+    for(let i in this.asd){
+      for(let j in data){
+        if(this.asd[i].groupid === data[j].groupid){
+          this.asd[i].groupname = data[j].groupname
+          fs.writeFileSync(this.file, YAML.stringify(this.asd), "utf8")
+        }
+      }
+    }
+    console.log(data)
+    console.log('更新成功')
   }
 
   /** 获取yaml文件数据 */
   get (name) {
-    let file = `${this._path}/plugins/example/${name}.yaml`
+    let file = `${this._path}/data/${name}.yaml`
     let key = `${name}`
     this[key] = YAML.parse(
       fs.readFileSync(file, "utf8")
