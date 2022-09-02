@@ -262,8 +262,6 @@ export class lanjie extends plugin {
         }
       }
     }
-    console.log(data)
-    console.log('更新成功')
   }
 
   /** 获取yaml文件数据 */
