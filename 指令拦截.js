@@ -65,7 +65,7 @@ export class lanjie extends plugin {
       if (this.asd[i].groupid === this.e.group_id) {
         let mag = this.asd[i].word
         for (let j in mag) {
-          if(mag[j].includes("XX") && this.e.msg.includes(mag[j].replace(/XX/,""))){
+          if(!/#禁止/.test(this.e.msg) && !/#开放/.test(this.e.msg) && mag[j].includes("XX") && this.e.msg.includes(mag[j].replace(/XX/,""))){
             return true;
           }
           if(mag[j] === this.e.msg){
@@ -139,6 +139,7 @@ export class lanjie extends plugin {
     let string =this.e.msg
     var list = string.split(" ")
     let del = list[0].replace(/#开放/,"")
+    console.log(list[1])
     let mag = []
     if(list[1] === undefined){
       if(!this.e.isGroup){
