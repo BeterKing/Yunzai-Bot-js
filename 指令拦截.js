@@ -15,19 +15,19 @@ export class lanjie extends plugin {
         priority: 2,
         rule: [rule,
         {
-          reg: "#禁止(.*)",
+          reg: "#禁止(.*)$",
           fnc: "jinzhi"
         },
         {
-          reg: "#开放(.*)",
+          reg: "#开放(.*)$",
           fnc: "del"
         },
         {
-          reg: "#列表|#本群列表",
+          reg: "#列表|#本群列表$",
           fnc: "help"
         },
         {
-          reg: '#更新群列表',
+          reg: '#更新群列表$',
           fnc: 'update'
         }
         ]
