@@ -1,0 +1,3 @@
+帐号管理.js放plugins-examp里面；
+Default.yaml放recourses里面；
+checkonline.js放lib-event里面。
