@@ -32,7 +32,7 @@ Yunzai插件V3（自行下载到example里即可）
 <img src= "img/Screenshot_20220915_112724_com.tencent.mobileqq_e.jpg" width="30%">  
 
 其他的功能自行探索吧，已经尽力把交互做的人性化了
-<img src= "img/-460a083581192ab7.jpg" width="30%">
+<img src= "img/-460a083581192ab7.jpg" width="10%">
 
 ### 注意  
 此插件会在recourses文件下生成bot.yaml文件存储配置信息，具体哪些文件放哪里请看文件中的使用说明  
