@@ -22,6 +22,18 @@ Yunzai插件V3（自行下载到example里即可）
 #切换+数字  
 #设置替换开启（开启之后，在你的帐号发生掉线之后会在你所配置的帐号中选择另一个帐号重新登录）  
 
+### 部分功能演示： 
+配置替换帐号：  
+<img src= "img/Screenshot_20220915_112350_com.tencent.mobileqq_e.jpg" width="30%">
+<img src= "img/Screenshot_20220915_112548_com.tencent.mobileqq_e.jpg" width="30%">  
+
+配置帐号：  
+<img src= "img/Screenshot_20220915_112717_com.tencent.mobileqq_e.jpg" width="30%">
+<img src= "img/Screenshot_20220915_112724_com.tencent.mobileqq_e.jpg" width="30%">  
+
+其他的功能自行探索吧，已经尽力把交互做的人性化了
+<img src= "img/-460a083581192ab7.jpg" width="30%">
+
 ### 注意  
 此插件会在recourses文件下生成bot.yaml文件存储配置信息，具体哪些文件放哪里请看文件中的使用说明  
 所有命令均为主人专属，#配置命令只支持私聊
